@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
-import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
+import { Nav, NavIcon, NavText,withRR4 } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
 import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
 import { ic_business } from 'react-icons-kit/md/ic_business';
@@ -22,32 +22,36 @@ const notFound =() =>(
     </div>
 );
 
-const routes = (
-    <BrowserRouter>
-        <Switch>
-            <Route path ='/' component = {a1} exact = {true}/>
-            <Route path ='/other' component = {a2}/>
-            <Route component = {notFound}/>
-        </Switch>
-    </BrowserRouter>
+
+const SideNav = withRR4();
+
+export const MySideNav = (
+    <Router>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
+            <div style={{width: 220}}>
+                <SideNav default='dashboard' highlightBgColor='blue' highlightColor='white'>
+                    <Nav id='dashboard'>
+                        <NavText>  Dashboard </NavText>
+                    </Nav>
+                    <Nav id='sales'>
+                        <NavText> Sales </NavText>
+                        <Nav id='list'>
+                            <NavText> List Sales </NavText>
+                        </Nav>
+                    </Nav>
+                    <Nav id='products'>
+                        <NavText>  Products </NavText>
+                    </Nav>
+                </SideNav>
+            </div>
+            <div style={{padding: 20}}>
+                <Route exact path="/" render={a1}/>
+                <Route path="/sales" render={a2}/>
+                <Route path="/products" render={a1}/>
+            </div>
+        </div>
+    </Router>
 );
-
-
-const MySideNav = () => (
-    <div style={{background: '#2c3e50', color: '#FFF', width: 220}}>
-        <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='sales'>
-            <Nav id='dashboard'>
-                <NavIcon><SvgIcon size={20} icon={ic_aspect_ratio}/></NavIcon>
-                <NavText> Dashboard </NavText>
-            </Nav>
-            <Nav id='sales'>
-                <NavIcon><SvgIcon size={20} icon={ic_business}/></NavIcon>
-                <NavText> Sales </NavText>
-            </Nav>
-        </SideNav>
-    </div>
-);
-
 
 
 
@@ -66,7 +70,7 @@ class App extends Component {
         <p className="App-intro">
         </p>
           {MySideNav}
-          {routes}
+
       </div>
     );
   }
