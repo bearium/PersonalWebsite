@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import { Nav, NavIcon, NavText,withRR4 } from 'react-sidenav';
@@ -27,33 +27,47 @@ const SideNav = withRR4();
 
 export const MySideNav = (
     <Router>
-        <div style={{display: 'flex', flexDirection: 'row'}}>
-            <div style={{width: 220}}>
-                <SideNav default='dashboard' highlightBgColor='blue' highlightColor='white'>
+        <div style={{background: '#2c3e50', color: '#FFF', width: 220}}>
+            <header>Navigation</header>
+            <div style={{padding: 5}}>
+            </div>
+            <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='Dashboard'>
                     <Nav id='dashboard'>
+                        <NavIcon><SvgIcon size={20} icon={ic_aspect_ratio}/></NavIcon>
                         <NavText>  Dashboard </NavText>
                     </Nav>
-                    <Nav id='sales'>
-                        <NavText> Sales </NavText>
-                        <Nav id='list'>
-                            <NavText> List Sales </NavText>
+                    <Nav id='Me'>
+                        <NavText> Me </NavText>
+                        <Nav id='About Me'>
+                            <NavText> About Me </NavText>
+                        </Nav>
+                        <Nav id='Contact Me'>
+                            <NavText> Contact Me </NavText>
                         </Nav>
                     </Nav>
-                    <Nav id='products'>
-                        <NavText>  Products </NavText>
+                    <Nav id='Projects'>
+                        <NavText>  Projects </NavText>
                     </Nav>
                 </SideNav>
-            </div>
-            <div style={{padding: 20}}>
-                <Route exact path="/" render={a1}/>
-                <Route path="/sales" render={a2}/>
-                <Route path="/products" render={a1}/>
-            </div>
+
+
         </div>
     </Router>
 );
 
+const routes = (
+    <Router>
+        <Switch>
+            <Route exact path="/DashBoard" render={a1}/>
+            <Route exact path="/Me" render={a1}/>
+            <Route path="About Me" render={a2}/>
+            <Route path="/Contact Me" render={a1}/>
+            <Route path="/Projects" render={a1}/>
+            <Route component={notFound}/>
+        </Switch>
+    </Router>
 
+);
 
 class App extends Component {
 
@@ -62,15 +76,12 @@ class App extends Component {
   render() {
     return (
 
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <div >
+        <header >
+          <h1 className="App-title">Welcome to my website</h1>
         </header>
-        <p className="App-intro">
-        </p>
           {MySideNav}
-
+          {routes}
       </div>
     );
   }
