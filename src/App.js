@@ -5,12 +5,14 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import { Nav, NavIcon, NavText,withRR4 } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
 import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
+import { user } from 'react-icons-kit/icomoon/user';
 import Projects from './Components/Projects'
 import Me from './Components/Me'
+import { keyboard } from 'react-icons-kit/icomoon/keyboard';
 
 
 const me =() =>(
-    <me></me>
+    <Me></Me>
 );
 
 const projects =() =>(
@@ -36,12 +38,13 @@ export const MySideNav = (
             <header>Navigation</header>
             <div style={{padding: 5}}>
             </div>
-            <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='Dashboard'>
+            <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='Dashboard' onItemSelection={ (id, parent) => {}}>
                     <Nav id='dashboard'>
                         <NavIcon><SvgIcon size={20} icon={ic_aspect_ratio}/></NavIcon>
                         <NavText>  Dashboard </NavText>
                     </Nav>
                     <Nav id='Me'>
+                        <NavIcon><SvgIcon size={20} icon={user}/></NavIcon>
                         <NavText> Me </NavText>
                         <Nav id='About Me'>
                             <NavText> About Me </NavText>
@@ -51,11 +54,10 @@ export const MySideNav = (
                         </Nav>
                     </Nav>
                     <Nav id='Projects'>
+                        <NavIcon><SvgIcon size={20} icon={keyboard}/></NavIcon>
                         <NavText>  Projects </NavText>
                     </Nav>
                 </SideNav>
-
-
         </div>
     </Router>
 );

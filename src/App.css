@@ -6,7 +6,7 @@ body {
   font-weight: 300;
   position: relative;
   height: 100vh;
-  color: #555;
+  color: #ffffff;
 }
 
 .wrapper {
@@ -18,7 +18,7 @@ body {
   left: 50%;
   margin: 0 auto;
   transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  background-color: #333333;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
