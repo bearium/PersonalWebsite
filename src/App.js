@@ -36,7 +36,7 @@ class App extends Component {
     render() {
         return (<Router>
             <div className="wrapper">
-                <div style={{background: '#222222', color: '#FFF', width: 220}}>
+                <div style={{background: '#222222', color: '#FFF', width: 200}}>
                     <header>Navigation</header>
                     <div style={{padding: 5}}>
                     </div>

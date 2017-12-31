@@ -6,10 +6,12 @@ class Me extends Component {
     render() {
         return (
 
-            <div>
+            <div className="page1">
+                <br></br>
                 <img className="me" src={pic} alt="avatar"></img>
 
-                <p>this is adsd me</p>
+                <h1 className="Title">Jacob Martin</h1>
+                <p className="Title">Computer Systems Engineering Student</p>
 
 
             </div>

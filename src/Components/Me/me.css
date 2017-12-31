@@ -1,4 +1,12 @@
+.page1{
+    grid-column: 3/ 6;
+
+}
+
+
+
 .me {
+
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -10,6 +18,12 @@
 
 }
 
+.Title{
+
+    text-align: center;
+
+
+}
 
 
 
