@@ -5,14 +5,15 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import { Nav, NavIcon, NavText,withRR4 } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
 import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
-import Projects from './Components/projectpage'
+import Projects from './Components/Projects'
+import Me from './Components/Me'
 
 
-const a1 =() =>(
-    <div> hi</div>
+const me =() =>(
+    <me></me>
 );
 
-const a2 =() =>(
+const projects =() =>(
     <Projects></Projects>
 );
 
@@ -63,10 +64,10 @@ const routes = (
     <Router>
         <Switch>
             <Route path="/dashboard" render={a3}/>
-            <Route path="/Me" render={a1}/>
-            <Route path="/Me/Me/About%20Me" render={a2}/>
-            <Route path="/Me/Me/Contact" render={a1}/>
-            <Route path="/Projects" render={a2}/>
+            <Route path="/Me" render={me}/>
+            <Route path="/Me/Me/About%20Me" render={me}/>
+            <Route path="/Me/Me/Contact" render={me}/>
+            <Route path="/Projects" render={projects}/>
             <Route component={notFound}/>
         </Switch>
     </Router>
