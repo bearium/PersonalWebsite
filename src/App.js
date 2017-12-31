@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import { Nav, NavIcon, NavText,withRR4 } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
 import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
-import { ic_business } from 'react-icons-kit/md/ic_business';
+import Projects from './Components/projectpage'
 
 
 const a1 =() =>(
@@ -13,7 +13,11 @@ const a1 =() =>(
 );
 
 const a2 =() =>(
-    <div> hi yo</div>
+    <Projects></Projects>
+);
+
+const a3 =() =>(
+    <div> kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>
 );
 
 const notFound =() =>(
@@ -27,7 +31,7 @@ const SideNav = withRR4();
 
 export const MySideNav = (
     <Router>
-        <div style={{background: '#2c3e50', color: '#FFF', width: 220}}>
+        <div style={{background: '#222222', color: '#FFF', width: 220}}>
             <header>Navigation</header>
             <div style={{padding: 5}}>
             </div>
@@ -58,11 +62,11 @@ export const MySideNav = (
 const routes = (
     <Router>
         <Switch>
-            <Route exact path="/DashBoard" render={a1}/>
-            <Route exact path="/Me" render={a1}/>
-            <Route path="About Me" render={a2}/>
-            <Route path="/Contact Me" render={a1}/>
-            <Route path="/Projects" render={a1}/>
+            <Route path="/dashboard" render={a3}/>
+            <Route path="/Me" render={a1}/>
+            <Route path="/Me/Me/About%20Me" render={a2}/>
+            <Route path="/Me/Me/Contact" render={a1}/>
+            <Route path="/Projects" render={a2}/>
             <Route component={notFound}/>
         </Switch>
     </Router>
@@ -76,13 +80,11 @@ class App extends Component {
   render() {
     return (
 
-      <div >
-        <header >
-          <h1 className="App-title">Welcome to my website</h1>
-        </header>
+      <div  className="wrapper">
           {MySideNav}
           {routes}
       </div>
+
     );
   }
 }
