@@ -5,6 +5,9 @@
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 1s;
+
+    text-align: center;
+
 }
 
 
@@ -33,12 +36,6 @@
 
 }
 
-.Title{
-
-    text-align: center;
-    transition: all 0.8s ease-out;
-
-}
 
 
 

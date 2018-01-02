@@ -5,10 +5,13 @@ import xmas from "./xmas.jpg"
 import resume from "./resume.png"
 import lunar from "./lunar.png"
 
+
 class Projects extends Component {
     render() {
         return (
+
             <div className="fade">
+                <h>Please checkout some of my past projects</h>
                 <table>
                     <tbody>
                     <tr>
