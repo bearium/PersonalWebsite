@@ -1,7 +1,22 @@
 .page1{
     grid-column: 3/ 6;
-
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
 }
+
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 
 
@@ -10,10 +25,10 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: url(me.jpg) 0 0;
+    background: url(me.jpg);
     display: block;
     margin: auto;
-
+    transition: all 0.8s ease-out;
 
 
 }
@@ -21,7 +36,7 @@
 .Title{
 
     text-align: center;
-
+    transition: all 0.8s ease-out;
 
 }
 
