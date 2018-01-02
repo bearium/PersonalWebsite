@@ -4,23 +4,24 @@ import './App.css';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import { Nav, NavIcon, NavText, withRR4 } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
-import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
 import { user } from 'react-icons-kit/icomoon/user';
 import Projects from './Components/Projects'
 import Me from './Components/Me'
+import Resume from './Components/Resume'
+
 import { keyboard } from 'react-icons-kit/icomoon/keyboard';
 
 
 const me =() =>(
-    <Me></Me>
+    <Me/>
 );
 
 const projects =() =>(
-    <Projects></Projects>
+    <Projects/>
 );
 
-const a3 =() =>(
-    <div> kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>
+const resume =() =>(
+    <Resume/>
 );
 
 const notFound =() =>(
@@ -41,15 +42,12 @@ class App extends Component {
                     <div style={{padding: 5}}>
                     </div>
                     <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='Dashboard'>
-                        <Nav id='dashboard'>
-                            <NavIcon><SvgIcon size={20} icon={ic_aspect_ratio}/></NavIcon>
-                            <NavText>  Dashboard </NavText>
-                        </Nav>
+
                         <Nav id='Me'>
                             <NavIcon><SvgIcon size={20} icon={user}/></NavIcon>
                             <NavText> Me </NavText>
-                            <Nav id='About Me'>
-                                <NavText> About Me </NavText>
+                            <Nav id='resume'>
+                                <NavText> Resume </NavText>
                             </Nav>
                             <Nav id='Contact Me'>
                                 <NavText> Contact Me </NavText>
@@ -62,8 +60,9 @@ class App extends Component {
                     </SideNav>
                 </div>
                 <Switch>
-                    <Route path="/dashboard" render={a3} />
-                    <Route path="/Me" render={me} />
+                    <Route exact path="/" render={me} />
+                    <Route exact path="/Me" render={me} />
+                    <Route path="/Me/Me/resume" render={resume} />
                     <Route path="/Me/Me/About%20Me" render={me} />
                     <Route path="/Me/Me/Contact" render={me} />
                     <Route path="/Projects" render={projects} />

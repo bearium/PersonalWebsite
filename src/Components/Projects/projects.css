@@ -4,6 +4,7 @@
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 1s;
+    padding-left: 115px;
 }
 
 .column1{
@@ -89,13 +90,15 @@ button.alt:active,
 /* Box */
 
 .box {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     background: #222222;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .box .image.fit {
-    margin: 0;
-    border-radius: 0;
+    margin: 0px;
+    border-radius: 0px;
 }
 
 .box .image.fit img {
@@ -104,7 +107,14 @@ button.alt:active,
 
 
 .box .content {
-    padding: 2.5rem;
+    padding: 1rem;
 }
 
+.title{
+    text-align: center;
+    padding-bottom: -20px;
+}
 
+.table{
+    padding: 8px;
+}

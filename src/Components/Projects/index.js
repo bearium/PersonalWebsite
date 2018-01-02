@@ -9,45 +9,65 @@ import lunar from "./lunar.png"
 class Projects extends Component {
     render() {
         return (
-
             <div className="fade">
-                <h>Please checkout some of my past projects</h>
-                <table>
+                <h1 className="title">Please checkout some of my past projects</h1>
+                <table >
                     <tbody>
                     <tr>
-                        <td>
+                        <td className="table">
                             <div className="column1">
                                 <div className="box">
                                     <div className="content">
+                                        <h2 className="align-center">Website</h2>
                                         <div className='image fit'>
                                           <img src = {ryke} alt/>
                                         </div>
                                         <header className="align-center">
                                             <p>Software name</p>
-                                            <h2>Website</h2>
                                         </header>
                                         <p className="align-center"> description.</p>
                                         <footer className="align-center">
-                                            <a href="#" className="button alt">visit</a>
+                                            <a href="https://ryke.xyz" className="button alt">visit</a>
                                         </footer>
                                     </div>
                                 </div>
                             </div>
                         </td>
-                        <td>
+                        <td className="table">
                             <div>
                                 <div className="box">
                                     <div className="content">
+                                        <header className="align-center">
+                                        <h2 className="align-center">Website</h2>
+                                        </header>
                                         <div className='image fit'>
                                             <img src = {xmas} alt/>
                                         </div>
                                         <header className="align-center">
                                             <p>Software name</p>
-                                            <h2>Website</h2>
                                         </header>
                                         <p className="align-center"> description.</p>
                                         <footer className="align-center">
-                                            <a href="#" className="button alt">visit</a>
+                                            <a href="https://mlh.ryke.xyz" className="button alt">visit</a>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td className="table">
+                            <div className="column1">
+                                <div className="box">
+                                    <div className="content">
+                                        <h2 className="align-center">Website</h2>
+                                        <div className='image fit'>
+                                            <img src = {lunar} alt/>
+                                        </div>
+                                        <header className="align-center">
+                                            <p>Software name</p>
+                                        </header>
+                                        <p className="align-center"> description.</p>
+                                        <footer className="align-center">
+                                            <a href="http://wecameforthefood.me" className="button alt">visit</a>
                                         </footer>
                                     </div>
                                 </div>
@@ -55,44 +75,27 @@ class Projects extends Component {
                         </td>
                     </tr>
                     <tr>
-                    <td>
+                        <td/>
+                    <td className="table">
                         <div className="column1">
                             <div className="box">
                                 <div className="content">
+                                    <h2 className="align-center">Website</h2>
                                     <div className='image fit'>
                                         <img src = {resume} alt/>
                                     </div>
                                     <header className="align-center">
                                         <p>Software name</p>
-                                        <h2>Website</h2>
                                     </header>
                                     <p className="align-center"> description.</p>
                                     <footer className="align-center">
-                                        <a href="#" className="button alt">visit</a>
+                                        <a href="https://hack.ryke.xyz/" className="button alt">visit</a>
                                     </footer>
                                 </div>
                             </div>
                         </div>
                     </td>
-                    <td>
-                        <div className="column1">
-                            <div className="box">
-                                <div className="content">
-                                    <div className='image fit'>
-                                        <img src = {lunar} alt/>
-                                    </div>
-                                    <header className="align-center">
-                                        <p>Software name</p>
-                                        <h2>Website</h2>
-                                    </header>
-                                    <p className="align-center"> description.</p>
-                                    <footer className="align-center">
-                                        <a href="#" className="button alt">visit</a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
+
                     </tr>
                     </tbody>
                 </table>

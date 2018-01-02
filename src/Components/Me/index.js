@@ -21,6 +21,10 @@ class Me extends Component {
                 <a href="https://www.linkedin.com/in/jacob-martin-6b4063135/" rel="nofollow" target="_blank">
                     <img src="https://www.dsgfs.com/wp-content/uploads/2014/11/LinkedIn-View-Button.png" alt="LinkedIn Add to Profile button"/>
                 </a>
+                <br/>
+                <a href="https://github.com/bearium" rel="nofollow" target="_blank">
+                    <img className="git" src="http://blog.davidecoppola.com/wp-content/uploads/2016/11/GitHub-logo-header.png" alt="LinkedIn Add to Profile button"/>
+                </a>
 
 
             </div>

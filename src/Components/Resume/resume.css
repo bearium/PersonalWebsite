@@ -1,15 +1,10 @@
-.page1{
-    grid-column: 3/ 6;
+.fade{
     opacity: 1;
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 1s;
-
-    text-align: center;
-
 }
-
 
 @keyframes fadeInOpacity {
     0% {
@@ -22,28 +17,16 @@
 
 
 
-
-.me {
-
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: url(me.jpg);
-    display: block;
-    margin: auto;
-    transition: all 0.8s ease-out;
-
+.iframe{
+    margin-left: 80px;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
 
 }
 
-
-
-.git{
-    border-radius: 25px;
+.dl{
+    margin-left: 280px;
     width: 200px;
+    height: 100px;
 }
-
-
-
-
-
