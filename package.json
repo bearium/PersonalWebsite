@@ -1,7 +1,7 @@
 {
   "name": "personalwebsite",
   "version": "0.1.0",
-  "homepage": "https://bearium.github.io/PersonalWebsite/",
+  "homepage": "http://www.jacobmartineng.me/",
   "private": true,
   "dependencies": {
     "babel-cli": "6.24.1",
