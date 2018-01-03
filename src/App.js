@@ -49,9 +49,6 @@ class App extends Component {
                             <Nav id='resume'>
                                 <NavText> Resume </NavText>
                             </Nav>
-                            <Nav id='Contact Me'>
-                                <NavText> Contact Me </NavText>
-                            </Nav>
                         </Nav>
                         <Nav id='Projects'>
                             <NavIcon><SvgIcon size={20} icon={keyboard}/></NavIcon>
@@ -60,11 +57,9 @@ class App extends Component {
                     </SideNav>
                 </div>
                 <Switch>
-                    <Route exact path="/" render={me} />
+                    <Route exact path="jacobmartin.me/" render={me} />
                     <Route exact path="/Me" render={me} />
                     <Route path="/Me/Me/resume" render={resume} />
-                    <Route path="/Me/Me/About%20Me" render={me} />
-                    <Route path="/Me/Me/Contact" render={me} />
                     <Route path="/Projects" render={projects} />
                     <Route component={notFound} />
                 </Switch>
