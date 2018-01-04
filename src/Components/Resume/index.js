@@ -8,9 +8,9 @@ class Resume extends Component {
         return (
             <div className="fade">
 
-                <iframe className="iframe" src="https://docs.google.com/document/d/e/2PACX-1vTpugFE9YkEzggDu4tt6ULlfaMjAvLUwfLLg9fT28Y0LalJQHt4Yoo_KY3XbfX_HeIQAvKXop0fIN4v/pub?embedded=true"/>
+                <iframe className="iframe" src="https://docs.google.com/document/d/e/2PACX-1vRCuJHrH_0qZKWwCxbLW1ua0SzangzhpVQYtfneBueRtKKimxPUghzv88GoBC1XJxLwxrJxyh1SKgmE/pub?embedded=true"/>
 
-                <a href="https://docs.google.com/document/d/1cTk2HiW4WGoAdWc-ifLq-zeQRZjKmPvqJ-WjvGegp4g/export?format=pdf" rel="nofollow" target="_blank">
+                <a href="https://docs.google.com/document/d/1LcQ7egzGRPUIAjUGnDYU7xVgExDo9FUbzVNY1OObRcs/export?format=pdf" rel="nofollow" target="_blank">
                     <img className="dl" src="http://www.ashsimons.com/wp-content/uploads/2016/04/download-button.png" alt="LinkedIn Add to Profile button"/>
                 </a>
                 </div>

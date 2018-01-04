@@ -57,7 +57,7 @@ class App extends Component {
                     </SideNav>
                 </div>
                 <Switch>
-                    <Route exact path="jacobmartin.me/" render={me} />
+                    <Route exact path="/" render={me} />
                     <Route exact path="/Me" render={me} />
                     <Route path="/Me/Me/resume" render={resume} />
                     <Route path="/Projects" render={projects} />
